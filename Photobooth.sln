@@ -1,0 +1,51 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.App", "Photobooth.App\Photobooth.App.csproj", "{9F2FFB15-FBEF-42EB-A460-3C7734CE501E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.Domain", "Photobooth.Domain\Photobooth.Domain.csproj", "{0FD765CD-D79E-4DD0-A19A-78FDD98B2C71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.Services", "Photobooth.Services\Photobooth.Services.csproj", "{56B866AF-79C5-4716-92EF-DD4A18AA60DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.Template", "Photobooth.Template\Photobooth.Template.csproj", "{08C71038-2E5E-4F27-B0F4-59B8750C097A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.Camera.Canon", "Photobooth.Camera.Canon\Photobooth.Camera.Canon.csproj", "{165D589B-7CF4-4F1E-AFDB-49A40A0B8DF5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Photobooth.Tests", "Photobooth.Tests\Photobooth.Tests.csproj", "{60CFA527-2B48-4686-8DE2-29D0DD0777BC}"
+EndProject
+Global
+GlobalSection(SolutionConfigurationPlatforms) = preSolution
+Debug|Any CPU = Debug|Any CPU
+Release|Any CPU = Release|Any CPU
+EndGlobalSection
+GlobalSection(ProjectConfigurationPlatforms) = postSolution
+{9F2FFB15-FBEF-42EB-A460-3C7734CE501E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{9F2FFB15-FBEF-42EB-A460-3C7734CE501E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{9F2FFB15-FBEF-42EB-A460-3C7734CE501E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{9F2FFB15-FBEF-42EB-A460-3C7734CE501E}.Release|Any CPU.Build.0 = Release|Any CPU
+{0FD765CD-D79E-4DD0-A19A-78FDD98B2C71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{0FD765CD-D79E-4DD0-A19A-78FDD98B2C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{0FD765CD-D79E-4DD0-A19A-78FDD98B2C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{0FD765CD-D79E-4DD0-A19A-78FDD98B2C71}.Release|Any CPU.Build.0 = Release|Any CPU
+{56B866AF-79C5-4716-92EF-DD4A18AA60DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{56B866AF-79C5-4716-92EF-DD4A18AA60DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{56B866AF-79C5-4716-92EF-DD4A18AA60DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{56B866AF-79C5-4716-92EF-DD4A18AA60DF}.Release|Any CPU.Build.0 = Release|Any CPU
+{08C71038-2E5E-4F27-B0F4-59B8750C097A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{08C71038-2E5E-4F27-B0F4-59B8750C097A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{08C71038-2E5E-4F27-B0F4-59B8750C097A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{08C71038-2E5E-4F27-B0F4-59B8750C097A}.Release|Any CPU.Build.0 = Release|Any CPU
+{165D589B-7CF4-4F1E-AFDB-49A40A0B8DF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{165D589B-7CF4-4F1E-AFDB-49A40A0B8DF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{165D589B-7CF4-4F1E-AFDB-49A40A0B8DF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{165D589B-7CF4-4F1E-AFDB-49A40A0B8DF5}.Release|Any CPU.Build.0 = Release|Any CPU
+{60CFA527-2B48-4686-8DE2-29D0DD0777BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{60CFA527-2B48-4686-8DE2-29D0DD0777BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{60CFA527-2B48-4686-8DE2-29D0DD0777BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{60CFA527-2B48-4686-8DE2-29D0DD0777BC}.Release|Any CPU.Build.0 = Release|Any CPU
+EndGlobalSection
+GlobalSection(SolutionProperties) = preSolution
+HideSolutionNode = FALSE
+EndGlobalSection
+EndGlobal
