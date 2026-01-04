@@ -40,7 +40,6 @@ public partial class App : Application
                 services.AddSingleton<ITemplateRenderingService, TemplateRenderingService>();
                 services.AddSingleton<IPrintingService, PrintingService>();
                 services.AddSingleton<ICameraService, CanonCameraService>();
-                services.AddSingleton<MockCameraService>();
                 services.AddSingleton<MainWindow>();
                 services.AddSingleton<MainViewModel>();
             })

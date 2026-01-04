@@ -1,4 +1,7 @@
+using System;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using Photobooth.Camera.Canon.Services;
@@ -67,6 +70,7 @@ public class CaptureViewModel : ViewModelBase
     {
         _currentSession = await _sessionService.StartSessionAsync(_settings);
         CapturedPhotos.Clear();
+        await EnsureCameraConnected();
     }
 
     private async Task Capture()
@@ -84,9 +88,11 @@ public class CaptureViewModel : ViewModelBase
         }
         CountdownDisplay = "";
         var path = Path.Combine(_sessionService.GetSessionFolder(_currentSession!), "originals", $"photo_{CapturedPhotos.Count + 1}.jpg");
-        Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-        await File.WriteAllTextAsync(path, "mock photo");
-        CapturedPhotos.Add(path);
+        var image = await _cameraService.CapturePhotoAsync(path);
+        if (image != null)
+        {
+            CapturedPhotos.Add(path);
+        }
     }
 
     private async Task CompleteSession()
@@ -94,6 +100,22 @@ public class CaptureViewModel : ViewModelBase
         if (_currentSession != null)
         {
             await _sessionService.CompleteSessionAsync(_currentSession);
+        }
+    }
+
+    private async Task EnsureCameraConnected()
+    {
+        await _cameraService.InitializeAsync();
+        var cameras = await _cameraService.GetCamerasAsync();
+        var firstCamera = cameras.FirstOrDefault();
+        if (firstCamera == null)
+        {
+            throw new InvalidOperationException("No Canon cameras detected.");
+        }
+
+        if (!_cameraService.IsConnected)
+        {
+            await _cameraService.ConnectAsync(firstCamera);
         }
     }
 }
