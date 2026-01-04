@@ -1,0 +1,24 @@
+<UserControl x:Class="Photobooth.App.Views.CaptureView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <Grid Background="#111">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Border Margin="20" Background="#222">
+            <Grid>
+                <Image Source="{Binding LiveViewFrame}" Stretch="Uniform"/>
+                <TextBlock Text="{Binding CountdownDisplay}" FontSize="72" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Grid>
+        </Border>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10" Spacing="10">
+            <Button Content="Start Session" Command="{Binding StartSessionCommand}" Padding="20" FontSize="18" />
+            <Button Content="Capture" Command="{Binding CaptureCommand}" Padding="20" FontSize="18" />
+            <Button Content="Complete" Command="{Binding CompleteSessionCommand}" Padding="20" FontSize="18" />
+        </StackPanel>
+    </Grid>
+</UserControl>
